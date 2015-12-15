@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/css/test.css">
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.3.min.js"></script>
+    <!--    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+        <script type="text/javascript">
+            function linkClick() {
+                //$(".filter-box").each(function() {
+                jQuery(".filter-box").each(function() {
+                        var id = jQuery(this).attr("data-filter-id");
+                        //var id = $(this).data("filter-id");
+
+                    console.log(id);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container-box filter-box" data-filter-id="2">
+            <div class="a-box">
+                aaa
+                <div class="a-box-inner1">
+                    a-box-inner1
+                </div>
+                <div class="a-box-inner2">
+                    a-box-inner2
+                </div>
+            </div>
+            <div class="b-box">
+                bbb
+                <div class="b-box-inner1 filter-box" data-filter-id="3">
+                    b-box-inner1
+                </div>
+                <div class="padding"></div>
+                <div class="b-box-inner2">
+                    b-box-inner2
+                </div>
+
+            </div>
+        </div>
+        <input type="button" value="押す" onclick="linkClick();">
+    </body>
+</html>
